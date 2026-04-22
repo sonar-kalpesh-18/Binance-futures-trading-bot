@@ -1,7 +1,7 @@
 import argparse
-from orders import place_order
-from validators import validate_input
-from logging_config import setup_logging
+from bot.orders import place_order
+from bot.validators import validate_input
+from bot.logging_config import setup_logging
 
 from rich.console import Console
 from rich.table import Table
@@ -23,7 +23,6 @@ def main():
 
     args = parser.parse_args()
 
-    # 🔥 Enhanced CLI UX (BONUS)
     if not args.symbol:
         args.symbol = input("Enter symbol (e.g., BTCUSDT): ")
 
@@ -52,7 +51,7 @@ def main():
             args.stop_price
         )
 
-        # 📊 Pretty Table Output
+        # Pretty Table Output
         console.print("\n[bold cyan]📌 Order Request Summary[/bold cyan]")
 
         table = Table()
@@ -64,7 +63,7 @@ def main():
 
         console.print(table)
 
-        # 🚀 Place Order
+        # Place Order
         order = place_order(
             args.symbol,
             args.side,

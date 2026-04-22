@@ -1,4 +1,4 @@
-from client import get_client
+from bot.client import get_client
 import logging
 
 def place_order(symbol, side, order_type, quantity, price=None, stop_price=None):
