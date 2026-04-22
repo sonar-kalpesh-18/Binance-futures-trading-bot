@@ -54,15 +54,17 @@ The application is designed with a modular architecture, proper logging, validat
 ```
 trading_bot/
 │
-├── client.py            # Binance API client setup
-├── orders.py            # Order execution logic
-├── validators.py        # Input validation
-├── logging_config.py    # Logging configuration
-├── cli.py               # CLI entry point
-├── trading_bot.log      # Log file (generated)
+├── bot/
+│   ├── __init__.py
+│   ├── client.py
+│   ├── orders.py
+│   ├── validators.py
+│   ├── logging_config.py
+│   ├── cli.py
+│
 ├── requirements.txt
-├── .env                 # API credentials (not shared)
-└── README.md
+├── README.md
+├── .gitignore
 ```
 
 ---
