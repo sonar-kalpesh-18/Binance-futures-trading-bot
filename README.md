@@ -95,36 +95,19 @@ API_SECRET=your_api_secret
 
 ## ▶️ Usage
 
+Run from project root:
+
 ### 🔹 MARKET Order
-
-```
-python cli.py --symbol BTCUSDT --side BUY --type MARKET --quantity 0.001
-```
-
----
+python -m bot.cli --symbol BTCUSDT --side BUY --type MARKET --quantity 0.001
 
 ### 🔹 LIMIT Order
-
-```
-python cli.py --symbol BTCUSDT --side BUY --type LIMIT --quantity 0.001 --price 60000
-```
-
----
+python -m bot.cli --symbol BTCUSDT --side BUY --type LIMIT --quantity 0.002 --price 60000
 
 ### 🔹 STOP-LIMIT Order
+python -m bot.cli --symbol BTCUSDT --side BUY --type STOP_LIMIT --quantity 0.002 --price 80000 --stop_price 79000
 
-```
-python cli.py --symbol BTCUSDT --side BUY --type STOP_LIMIT --quantity 0.002 --price 80000 --stop_price 79000
-```
-
----
-
-### 🔹 Interactive Mode (Bonus UX)
-
-```
-python cli.py
-```
-
+### 🔹 Interactive Mode
+python -m bot.cli
 👉 Prompts user for inputs interactively
 
 ---
